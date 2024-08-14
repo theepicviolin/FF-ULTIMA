@@ -9,6 +9,7 @@ Use the template below to enter your theme into the list:
 */
 
 @import url('all-global-theme-fullmoon.css') (-moz-bool-pref: "user.theme.dark.a");
+@import url('all-global-theme-bloodmoon.css') (-moz-bool-pref: "user.theme.dark.bloodmoon");
 @import url('all-global-theme-dusky.css') (-moz-bool-pref: "user.theme.light.a");
 @import url('all-global-theme-catppuccin.css') (-moz-bool-pref: "user.theme.dark.catppuccin"); 
 @import url('all-global-theme-catppuccin-mocha.css') (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"); 

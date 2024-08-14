@@ -18,6 +18,8 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("pic/fullmoon.png") !important;}}
 
+@media (-moz-bool-pref: "user.theme.dark.bloodmoon"){body{background-image: url("pic/bloodmoon.png") !important;}}
+
 @media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
 
 @media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("pic/catppuccin.png") !important;}}
