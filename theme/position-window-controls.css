@@ -60,6 +60,10 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
     /* margin-left if you have it on left side*/
 } 
 
+#urlbar-container {
+    -moz-window-dragging: drag;
+}
+
 /* adjust window control total button size to match toolbar buttons (30px). */
 @media (-moz-platform: windows) {
     .titlebar-buttonbox .titlebar-button {
