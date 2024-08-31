@@ -14,6 +14,7 @@ user_pref("ultima.tabs.size.s", false);
 user_pref("ultima.tabs.size.l", true);
 user_pref("ultima.tabs.autohide", true);
 user_pref("ultima.tabs.closetabsbutton", false);
+user_pref("ultima.tabs.showaudioplayingicon", false);
 user_pref("ultima.tabs.vertical.hide", false);
 user_pref("ultima.tabs.vertical.onlyprivate", false);
 user_pref("ultima.tabs.vertical.rightside", false);

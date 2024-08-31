@@ -2,27 +2,42 @@
 - permanent-positioning for the indicator of tabs projecting audio
  ------------------------------------------------------------- */
 
-:root {
-    --tab-icon-overlay-stroke: var(--uc-active) !important;
+ @media (-moz-bool-pref: "ultima.tabs.showaudioplayingicon") {
+    :root {
+        --tab-icon-overlay-stroke: var(--uc-active) !important;
+    }
+
+    .tab-icon-image, .tab-throbber{ 
+        opacity: 1 !important;
+    }
+
+
+    .tab-icon-overlay:not([crashed]) {
+        z-index: 1;
+        opacity: 1 !important;
+        top: -5.5px; 
+        inset-inline-end: -6px; 
+        padding: 2px;
+        stroke: var(--tab-icon-overlay-stroke, black) !important;
+        fill: var(--tab-icon-overlay-fill, white) !important;
+        fill-opacity: 1 !important;
+    }
+
+    .tab-icon-overlay:not([crashed]):hover {
+        background-color: var(--tab-loading-fill) !important;
+        border-radius: var(--uc-all-border-radius) !important;
+    }
 }
 
-.tab-icon-image, .tab-throbber{ 
-    opacity: 1 !important;
-}
-
-
-.tab-icon-overlay:not([crashed]) {
-    z-index: 1; 
-    opacity: 1 !important;
-    top: -5.5px; 
-    inset-inline-end: -6px; 
-    padding: 2px;
-    stroke: var(--tab-icon-overlay-stroke, black) !important;
-    fill: var(--tab-icon-overlay-fill, white) !important;
-    fill-opacity: 1 !important;
-}
-
-.tab-icon-overlay:not([crashed]):hover {
-    background-color: var(--tab-loading-fill) !important;
-    border-radius: var(--uc-all-border-radius) !important;
+@media not (-moz-bool-pref: "ultima.tabs.showaudioplayingicon") {
+    /* Hide the mute/unmute button */
+    .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) {
+        display: none !important;
+    }
+    /* Keep site icon visible on hover */
+    .tabbrowser-tab:hover .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay), 
+        /* for site icon with Compact density */
+    :root[uidensity="compact"] .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay) {
+        opacity: 1 !important; /* overrides full transparency with full opacity */
+    }
 }
