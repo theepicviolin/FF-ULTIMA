@@ -66,3 +66,11 @@ user_pref("browser.tabs.hoverPreview.enabled", true);
 disable about config warning,
 enable browsertoolbox,
 no need to jump through firefox settings */
+
+/* custom theme settings */
+user_pref("ultima.tabs.closetabsbutton", true);
+user_pref("ultima.urlbar.hidebuttons", true);
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", true);
+user_pref("ultima.urlbar.suggestions", false); //controls "This time, search with:" bar - false = enable, true = disable
+user_pref("ultima.theme.extensions", false);
+user_pref("ultima.xstyle.squared", true);
